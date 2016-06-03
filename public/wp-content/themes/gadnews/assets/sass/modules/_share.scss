@@ -1,0 +1,35 @@
+.share-btns {
+	&__list {
+		.posts-list & {
+		}
+		.single-post & {
+		}
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 17px;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	&__link {
+		display: block;
+		width: 35px;
+		height: 35px;
+		@include font-size(0.875);
+		line-height: 35px;
+		text-decoration: none;
+		text-align: center;
+		border-radius: 50%;
+	}
+	&__text {
+		@include font-size(1.125);
+		line-height: 35px;
+		display: inline-block;
+		margin-right: 25px;
+		@media (max-width: 479px) {
+			display: block;
+		}
+	}
+}

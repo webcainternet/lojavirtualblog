@@ -1,0 +1,26 @@
+.footer-area {
+	padding-top: 44px;
+	padding-bottom: 29px;
+	aside {
+		margin-bottom: 50px;
+	}
+}
+.footer-area-wrap.invert{
+	.widget-title{
+		color: #dae0dd;
+	}
+}
+.footer-container {
+	padding: 35px 0;
+}
+
+.invert .footer-copyright {
+	color: #363C46;
+}
+.footer-copyright {
+	@include font-size(.8125);
+}
+
+@import "footer/layout-default";
+@import "footer/layout-centered";
+@import "footer/layout-minimal";

@@ -1,0 +1,23 @@
+.swiper-pagination .swiper-pagination-bullet{
+	background-color: $regular_accent_color_1;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+	color: $regular_accent_color_4;
+}
+.swiper-wrapper .post .entry-header::before {
+	background: $regular_accent_color_4;
+	background: -webkit-linear-gradient(to right, $regular_accent_color_4 0%, $regular_darken_color_1 100%);
+	background: linear-gradient(to right, $regular_accent_color_4 0%, $regular_darken_color_1 100%);
+}
+
+.post-gallery .swiper-button-next,
+ .post-gallery .swiper-button-prev {
+	 background: $regular_accent_color_1;
+		color: $invert_text_color;
+}
+.post-gallery .swiper-button-next:hover,
+.post-gallery .swiper-button-prev:hover {
+	color: $invert_text_color;
+	background: $regular_accent_color_2;
+}

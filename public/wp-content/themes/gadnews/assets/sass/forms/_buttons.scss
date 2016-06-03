@@ -1,0 +1,35 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include button;
+	padding: 15px 55px;
+	&:hover {
+	}
+
+	&:active,
+	&:focus {
+
+	}
+}
+
+.btn {
+	@include button;
+	&__text,
+	&__icon {
+		display: inline-block;
+		vertical-align: top;
+	}
+	&__icon {
+		@include material-icon();
+		font-size: 1.5em;
+		line-height: inherit;
+		&:before {
+			content: '\E5C8';
+		}
+	}
+	&.btn-fullwidth {
+		width: 100%;
+		text-align: center;
+	}
+}

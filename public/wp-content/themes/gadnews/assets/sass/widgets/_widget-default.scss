@@ -1,0 +1,347 @@
+.widget{
+	h4{
+		margin: 0 0 10px 0;
+	}
+	.footer-area &{
+		h3{
+			margin-bottom: 22px;
+		}
+	}
+	ul{
+		margin: 0 0;
+		padding: 0 0;
+		& li{
+			list-style:none;
+			@include font-size(0.8125);
+			margin: 15px 0 0 22px;
+			position: relative;
+			line-height: 1.5;
+
+			.footer-area &{
+				margin-left: 0;
+				margin-top: 5.8px;
+			}
+			&>ul{
+				margin-bottom: 0;
+				margin-left: 0;
+			}
+			&::before {
+				@include font-awesome-icon;
+				content: "\f105";
+				position: absolute;
+				@include font-size(0.8125);
+				top: 0;
+				left: -22px;
+				line-height: 1.5;
+
+				.footer-area & {
+					display: none;
+				}
+			}
+		}
+	}
+}
+.before-content-area,
+.after-content-area,
+.before-loop-area,
+.after-loop-area,
+.full-width-header-area{
+	& .widget_archive,
+	& .widget_meta,
+	& .widget_rss,
+	& .widget_recent_comments,
+	& .widget_recent_entries{
+		ul{
+			&::after {
+				content:'';
+				display: block;
+				clear: both;
+			}
+			& li{
+				margin-left: 2%;
+				width: 23%;
+				float: left;
+			}
+		}
+	}
+	& .widget_rss,
+	& .widget_recent_comments,
+	& .widget_recent_entries{
+		ul{
+			& li{
+				&:first-child{
+					border-top: 1px #e0e0e8 solid;
+					padding-top: 21px;
+					margin-left: 2%;
+				}
+				&:nth-child(1), &:nth-child(2), &:nth-child(3){
+					border-top: none;
+					padding-top: 0;
+				}
+				margin-left: 2%;
+				width: 31%;
+				float: left;
+			}
+		}
+	}
+	.widget_recent_comments,
+	& .widget_recent_entries{
+		ul{
+			margin-left: -2%;
+		}
+	}
+	& .widget_categories,
+	& .widget_pages,
+	& .widget_nav_menu > div{
+		&>ul{
+			&::after {
+				content:'';
+				display: block;
+				clear: both;
+			}
+			&>li{
+				margin-left: 2%;
+				width: 23%;
+				float: left;
+			}
+		}
+	}
+}
+/*--------------------------------------------------------------
+# Widget Categories
+--------------------------------------------------------------*/
+.widget_categories{
+	overflow: hidden;
+	h4{
+		margin-bottom: 14px;
+	}
+	ul li{
+		margin-top: 0;
+		padding: 7.5px 0;
+		position: relative;
+		z-index: 1;
+		&:before{
+			top: 50%;
+			@include transform(translateY(-50%));
+		}
+		&:nth-child(2n + 1){
+			&:after{
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 1000px;
+				left: -100px;
+				background: #f4f7f9;
+				z-index: -1;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Widget calendar
+--------------------------------------------------------------*/
+.widget_calendar{
+	h4{
+		margin: 0 0 24px 0;
+	}
+	.calendar_wrap{
+		table{
+			margin: 0px 0 0 -2px;
+		}
+		caption{
+			@include font-size(1.125);
+			margin-bottom: 24px;
+			font-weight: 300;
+		}
+		th{
+			@include font-size(1);
+			padding: 0 0 13px 0;
+			text-align: center;
+			position: relative;
+			left: -15px;
+			font-weight: 300;
+		}
+		tbody{
+			td{
+				padding: 0px 0 9px 0;
+				width: 15%;
+				text-align: center;
+				position: relative;
+				left: -15px;
+				@include font-size(.9375);
+				a{
+					position: relative;
+					display: inline-block;
+					width: 20px;
+					z-index: 1;
+					@include transition( all 0.5s ease );
+					&:hover{
+						color: #fff;
+						&::before{
+							opacity: 1;
+							@include transition( all 0.4s cubic-bezier( 0.175, 0.885, 0.32, 1.275 ) );
+							transform:scale( 1, 1 );
+						}
+					};
+					&::before {
+						content:'';
+						position: absolute;
+						width: 40px;
+						height: 40px;
+						top: -30%;
+						left: -50%;
+						z-index: -1;
+						border-radius: 50%;
+						display:block;
+						opacity: 0;
+						margin-left: 0px;
+						@include transition( all 0.3s cubic-bezier( 0.6, -0.28, 0.735, 0.045 ) );
+						transform:scale( 0.1, 0.1 );
+					}
+
+				}
+			}
+			tr:first-child > td{
+				padding: 14px 0 9px 0;
+			}
+		}
+		#prev, #next{
+			@include font-size(1);
+			padding: 10px 0 0 0;
+		}
+		#prev{
+
+		}
+		#next{
+			text-align: right;
+		}
+	}
+	@media ( max-width: 992px ) {
+		h4{
+			margin: 0 0 15px 0;
+		}
+		.calendar_wrap{
+			table{
+				margin: 0;
+			}
+		}
+	}
+}
+.footer-area{
+	.widget_calendar{
+		.calendar_wrap{
+			tbody td, th{
+				left: 0px;
+			}
+			td a::before{
+				width: 20px;
+				height: 20px;
+				top: -2%;
+				left: -5%;
+			}
+		}
+	}
+}
+/*--------------------------------------------------------------
+# Widget Tag Cloud
+--------------------------------------------------------------*/
+.widget_tag_cloud{
+	.tagcloud{
+		margin: 0 -5px;
+		a{
+			font-size: 12px !important;
+			font-size: 0.75rem !important;
+			line-height: 16px;
+			padding: 7px 10px;
+			border-radius: $border__radius;
+			text-decoration: none;
+			display: inline-block;
+			margin: 0 3px 10px;
+			font-style: italic;
+			transition: none;
+		}
+	}
+}
+/*--------------------------------------------------------------
+# Widget Recent Posts and Recent Comments
+--------------------------------------------------------------*/
+/* Recent Posts */
+.widget_recent_entries{
+	ul{
+		li{
+			margin: 0 0 24px 0;
+			a{
+				display: inline-block;
+				margin-bottom: 6px;
+			}
+			.post-date{
+				position: relative;
+				display: block;
+				margin: 10px 0 ;
+			}
+		}
+	}
+}
+/* Recent Comments */
+.widget_recent_comments{
+	ul{
+		li{
+			margin: 21px 0 0 0;
+		}
+	}
+}
+/* Recent Posts  & Recent Comments */
+.widget_recent_comments, .widget_recent_entries{
+	h4{
+		margin-bottom:18px;
+	}
+	ul{
+		li{
+			border-top: 1px #e0e0e8 solid;
+			.invert &{
+				border-top: 1px #1A2435 solid;
+			}
+			padding-top: 21px;
+			&:first-child{
+				border-top: none;
+				padding-top: 0;
+			}
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+/*--------------------------------------------------------------
+# Widget Texts
+--------------------------------------------------------------*/
+.widget_text{
+
+	.sidebar-primary &,
+	.sidebar-secondary &{
+		background: transparent;
+		padding-right: 0;
+
+		.widget-title{
+			margin-left: -15px;
+			margin-bottom: 13px;
+			@include media-breakpoint-up(lg) {
+				margin-left: -28px;
+		}
+		}
+
+		.textwidget{
+			@include font-size(.75);
+			line-height: 1.9;
+			p{
+				padding-bottom: 15px;
+			}
+		}
+	}
+}
+
+.after-content-full-width-area{
+	border-top: 2px solid #fff;
+}

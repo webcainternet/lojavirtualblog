@@ -1,0 +1,57 @@
+.team-listing{
+	margin-top: 63px;
+
+	.team:last-child {
+		@media (max-width: 767px) {
+			margin-bottom: 0;
+		}
+	}
+}
+.team{
+	display: flex;
+	flex-flow: row wrap;
+	margin-bottom: 52px;
+	margin-left: -15px;
+	margin-right: -15px;
+
+	&__meta{
+		padding-left: 15px;
+		padding-right: 15px;
+		flex: 0 0 100%;
+		@include media-breakpoint-up(xl){
+			flex: 0 0 37%;
+		}
+	}
+	&__text {
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-top: 5px;
+		flex: 0 0 100%;
+		@include media-breakpoint-up(xl){
+			margin-top: -5px;
+			flex: 0 0 63%;
+		}
+	}
+	&__photo{
+		float: left;
+		margin-right: 15px;
+		margin-bottom: 15px;
+		img{
+			border-radius: 50%;
+		}
+	}
+	&__name{
+		margin: 5px 0 0;
+		line-height: 1;
+	}
+	&__soc{
+		@include font-size(.75);
+	}
+	&__position{
+		margin-top: 3px;
+	}
+}
+
+.page-title-about{
+	margin-bottom: 30px;
+}

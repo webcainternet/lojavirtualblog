@@ -1,0 +1,53 @@
+.contact-info{
+	margin-top: 25px;
+	margin-bottom: 30px;
+	&__item{
+		position: relative;
+		padding-left: 50px;
+		padding-bottom: 30px;
+		&:before{
+			position: absolute;
+			@include font-awesome-icon;
+			font-size: 22px;
+			top: 5px;
+			left: 15px;
+		}
+	}
+	&__address{
+		&:before{
+			content: '\F278';
+		}
+		address{
+			font-style: normal;
+		}
+	}
+	&__phone{
+		&:before{
+			content: '\f095';
+		}
+		dl {
+			margin: 0;
+			dt{
+				font-weight: 400;
+			}
+			dt, dd{
+				margin: 0;
+				display: inline-block;
+			}
+		}
+	}
+	&__email{
+		&:before{
+			content: '\f003';
+		}
+		dl {
+			margin: 0;
+			dt{
+				font-weight: 400;
+			}
+			dt, dd{
+				margin: 0;
+			}
+		}
+	}
+}

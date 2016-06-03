@@ -1,0 +1,62 @@
+.main-navigation ul.menu > li > a,
+.main-navigation ul.menu > li > a:visited,
+.main-navigation ul.menu > li > a:active {
+	color: $regular_accent_color_2;
+}
+.menu-item_description {
+	color: $regular_text_color;
+}
+.main-navigation ul.menu > li:hover > a,
+.main-navigation ul.menu > li.menu-hover > a,
+.main-navigation ul.menu > li.current_page_item > a,
+.main-navigation ul.menu > li.current-menu-item > a,
+.main-navigation ul.menu > li.current_page_ancestor > a:hover {
+	color: $regular_accent_color_1;
+}
+.main-navigation ul ul a {
+	color: $regular_link_color;
+}
+
+.main-navigation ul.sub-menu > li:hover > a,
+.main-navigation ul.sub-menu > li.menu-hover > a,
+.main-navigation ul.sub-menu > li.current_page_item > a,
+.main-navigation ul.sub-menu > li.current-menu-item > a,
+.main-navigation ul.sub-menu > li.current_page_ancestor > a:hover {
+	color: $regular_link_hover_color;
+}
+@media (min-width: 600px) {
+	.main-navigation ul.sub-menu {
+		background: $invert_accent_color_1;
+	}
+}
+.invert .main-navigation ul.menu > li > a,
+.invert .main-navigation ul.menu > li > a:visited,
+.invert .main-navigation ul.menu > li > a:active {
+	color: $invert_accent_color_2;
+}
+.invert .menu-item_description {
+	color: $invert_text_color;
+}
+.invert .main-navigation ul.menu > li:hover > a,
+.invert .main-navigation ul.menu > li.menu-hover > a,
+.invert .main-navigation ul.menu > li.current_page_item > a,
+.invert .main-navigation ul.menu > li.current-menu-item > a,
+.invert .main-navigation ul.menu > li.current_page_ancestor > a:hover {
+	color: $invert_text_color;
+}
+
+@media (max-width: 599px) {
+	.invert .main-navigation ul ul a {
+		color: $invert_accent_color_2;
+	}
+	.invert .main-navigation ul ul a:hover {
+		color: $invert_link_color;
+	}
+	.invert .main-navigation ul.sub-menu > li:hover > a,
+	.invert .main-navigation ul.sub-menu > li.menu-hover > a,
+	.invert .main-navigation ul.sub-menu > li.current_page_item > a,
+	.invert .main-navigation ul.sub-menu > li.current-menu-item > a,
+	.invert .main-navigation ul.sub-menu > li.current_page_ancestor > a:hover {
+		color: $invert_link_color;
+	}
+}

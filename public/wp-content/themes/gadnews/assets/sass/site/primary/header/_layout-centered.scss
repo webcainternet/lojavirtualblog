@@ -1,0 +1,31 @@
+.site-header.centered {
+	.header-container{
+		@media (min-width: 600px) {
+			padding-top: 15px;
+		}
+	}
+	.site-branding {
+		text-align: left;
+		padding: 25.5px 0;
+		margin-right: 50px;
+		@media (min-width: 600px) {
+			margin-right: 0;
+			padding: 15px 0 0;
+			text-align: center;
+		}
+	}
+	.social-list {
+		text-align: center;
+		@media (max-width: 599px) {
+			display: none;
+		}
+	}
+	.main-navigation {
+		text-align: center;
+		ul.menu > li {
+			@media (min-width: 600px) {
+				padding: 15px 0 30px;
+			}
+		}
+	}
+}

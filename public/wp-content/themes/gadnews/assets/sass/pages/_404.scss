@@ -1,0 +1,64 @@
+.not-found {
+	@include card;
+	padding: 30px 15px;
+	@include media-breakpoint-up(lg) {
+		padding: 50px 30px 45px;
+	}
+	&.error-404{
+		.page-title{
+			font-size: 100px;
+			@include media-breakpoint-up(xl){
+				font-size: 122px;
+			}
+			line-height: 1;
+		}
+
+		.page-header{
+			display: flex;
+			flex-flow: row wrap;
+
+			.page-title {
+				flex-basis: 100%;
+				@include media-breakpoint-up(xl){
+					flex-basis: 41%;
+					border-right: 1px solid #192231;
+					padding-left: 20px;
+				}
+			}
+			.page-subtitle{
+				flex-basis: 100%;
+				padding-top: 20px;
+				align-self: center;
+				@include media-breakpoint-up(xl){
+					flex-basis: 59%;
+					padding-left: 67px;
+				}
+			}
+		}
+	}
+
+	.page-content{
+		margin-top: 30px;
+		@include media-breakpoint-up(xl){
+			margin-top: 69px;
+		}
+		h4{
+			line-height: 1.6666666666666;
+			margin-bottom: 15px;
+		}
+		.btn{
+			@include font-size(1.125);
+			margin-top: 15px;
+			padding: 20px;
+			@include media-breakpoint-up(xl){
+				padding: 25px 58px;
+				margin-top: 30px;
+			}
+		}
+	}
+	&.no-results{
+		.page-content{
+			margin-top: 0;
+		}
+	}
+}

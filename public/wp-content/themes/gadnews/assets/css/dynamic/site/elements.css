@@ -1,0 +1,47 @@
+.btn,
+.wpcf7-submit,
+button,
+.comment-form .submit,
+.post-password-form label + input {
+	color: $invert_link_color;
+	background: $regular_accent_color_1;
+}
+.btn:hover,
+.wpcf7-submit:hover,
+button:hover,
+.comment-form .submit:hover,
+.post-password-form label + input:hover {
+	color: $invert_link_color;
+	background: $regular_accent_color_2;
+}
+
+.invert .btn:hover{
+	color: $invert_link_color;
+}
+
+.btn.btn-secondary {
+	background: $regular_accent_color_2;
+}
+.btn.btn-secondary:hover {
+	background: @darken( $regular_accent_color_2, 15 );
+}
+
+.btn-icon {
+	color: $regular_link_color;
+}
+
+.btn-icon:hover {
+	color: $regular_link_hover_color;
+}
+
+.tm-chasing-dots .tm-child,
+.sk-cube-grid .sk-cube{
+	background-color: $regular_accent_color_1;
+}
+
+.breadcrumbs .invert a{
+	color: $invert_link_hover_color;
+}
+.breadcrumbs .invert a:hover{
+	color: $invert_link_color;
+}

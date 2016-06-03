@@ -1,0 +1,21 @@
+.site-footer {
+	background-color: $footer_bg;
+	background: -webkit-linear-gradient(to left, $footer_bg 0%, $regular_darken_color_1 100%);
+	background: linear-gradient(to left, $footer_bg 0%, $regular_darken_color_1 100%);
+}
+
+.footer-area-wrap {
+	background: $footer_widgets_bg;
+	background: -webkit-linear-gradient(to left, $footer_widgets_bg 0%, $regular_darken_color_1 100%);
+	background: linear-gradient(to left, $footer_widgets_bg 0%, $regular_darken_color_1 100%);
+}
+
+.footer-menu__items li.current-menu-item a,
+.footer-menu__items li.current_page_item a {
+	color: $regular_link_hover_color;
+}
+
+.invert .footer-menu__items li.current-menu-item a,
+.invert .footer-menu__items li.current_page_item a {
+	color: $invert_link_hover_color;
+}

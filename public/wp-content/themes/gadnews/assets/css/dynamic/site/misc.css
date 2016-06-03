@@ -1,0 +1,9 @@
+#toTop {
+	color: $regular_accent_color_1;
+	border: 2px solid $regular_accent_color_1;
+}
+#toTop:hover {
+	color: $invert_link_color;
+	background: $regular_accent_color_1;
+	border: 2px solid $regular_accent_color_1;
+}

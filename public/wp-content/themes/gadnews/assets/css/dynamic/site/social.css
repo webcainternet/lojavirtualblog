@@ -1,0 +1,35 @@
+.social-list a,
+.social-list a:hover,
+.social-list a:active,
+.social-list a:visited,
+.share-btns__link,
+.share-btns__link:hover,
+.share-btns__link:active,
+.share-btns__link:visited {
+	color: $regular_accent_color_1;
+}
+.social-list a:hover::before,
+.share-btns__link:hover {
+	background: $regular_accent_color_1;
+	color: $invert_link_color;
+}
+
+.invert .social-list a,
+.invert .social-list a:hover,
+.invert .social-list a:active,
+.invert .social-list a:visited,
+.invert .share-btns__link,
+.invert .share-btns__link:hover,
+.invert .share-btns__link:active,
+.invert .share-btns__link:visited {
+	color: $invert_link_color;
+}
+.invert .social-list a:hover .screen-reader-text {
+	color: $invert_link_hover_color;
+}
+
+.share-btns__text {
+	font-weight: $h4_font_weight;
+	font-family: $h4_font_family;
+	color: $regular_darken_color_1;
+}

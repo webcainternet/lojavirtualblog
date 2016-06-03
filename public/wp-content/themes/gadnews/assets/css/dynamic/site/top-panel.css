@@ -1,0 +1,26 @@
+.top-panel__message .material-icons {
+	color: $regular_accent_color_1;
+}
+.top-panel__menu-list li a,
+.top-panel__menu-list li a:active,
+.top-panel__menu-list li a:visited {
+	color: $regular_darken_color_2;
+}
+
+.top-panel__menu-list li.current-menu-item a,
+.top-panel__menu-list li.current_page_item a,
+.top-panel__menu-list li a:hover {
+	color: $regular_text_color;
+}
+
+.invert .top-panel__menu-list li a,
+.invert .top-panel__menu-list li a:active,
+.invert .top-panel__menu-list li a:visited {
+	color: $invert_accent_color_2;
+}
+
+.invert .top-panel__menu-list li.current-menu-item a,
+.invert .top-panel__menu-list li.current_page_item a,
+.invert .top-panel__menu-list li a:hover {
+	color: $invert_link_color;
+}

@@ -1,0 +1,14 @@
+.widget-image-grid__content::before{
+	background: $regular_accent_color_4;
+	background: -webkit-linear-gradient(to right, $regular_accent_color_4 0%, $regular_darken_color_1 100%);
+	background: linear-gradient(to right, $regular_accent_color_4 0%, $regular_darken_color_1 100%);
+}
+.widget-image-grid__content .widget-image-grid__link i{
+	color: $regular_accent_color_3;
+}
+.widget-image-grid__content .widget-image-grid__link:hover i{
+	color: $regular_accent_color_1;
+}
+.widget-image-grid__content .widget-image-grid__title a:hover {
+	color: $regular_accent_color_1;
+}

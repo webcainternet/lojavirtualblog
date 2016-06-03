@@ -1,0 +1,153 @@
+/*!
+Theme Name: Gadnews
+Theme URI: http://underscores.me/
+Author: Template Monster
+Author URI: http://www.templatemonster.com/
+Description: Your theme description.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gadnews
+Tags: blue, white, light, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-colors, custom-menu, featured-images, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+blank is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+	## Social List
+# Accessibility
+# Alignments
+# Clearings
+# Grid
+# Widgets
+# Content
+	## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+@import "mixins/mixins-transform";
+@import "mixins/flexbox-mixin";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Grid
+--------------------------------------------------------------*/
+@import "grid/grid";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+@import "elements/page-preloader";
+@import "elements/totop-button";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+@import "navigation/breadcrumbs";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+@import "modules/comments";
+
+/*--------------------------------------------------------------
+# Author Bio
+--------------------------------------------------------------*/
+@import "modules/author-bio";
+
+/*--------------------------------------------------------------
+# Share Buttons
+--------------------------------------------------------------*/
+@import "modules/share";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "card/card";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+@import "widgets/tm-widget-image-grid";
+@import "widgets/tm-widget-taxonomy-tiles";
+@import "widgets/tm-widget-carousel-slider";
+@import "widgets/tm-widget-smart-slider";
+@import "widgets/tm-widget-about-author";
+@import "widgets/tm-widget-subscribe";
+@import "widgets/tm-widget-featured-posts-block";
+@import "widgets/instagram";
+@import "widgets/facebook-pagelike-widget";
+@import "widgets/widget-default";
+@import "widgets/custom-posts";
+@import "widgets/tm-widget-news-smart-box";
+@import "widgets/playlist-slider";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+@import "pages/pages";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";

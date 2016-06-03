@@ -1,0 +1,78 @@
+@import "variables";
+
+.card {
+	display: block;
+	@include word-wrap;
+}
+
+
+//
+// Grid layout
+//
+
+@include media-breakpoint-up(md) {
+	.card-deck {
+		display: flex;
+		flex-flow: row wrap;
+		margin-right: -$card-deck-margin / 2;
+		margin-left: -$card-deck-margin / 2;
+		.card {
+			flex: 1 0 0;
+			margin-right: $card-deck-margin / 2;
+			margin-left: $card-deck-margin / 2;
+		}
+	}
+	.posts-list {
+		&--grid-2-cols {
+			.card {
+				flex: 1 0 calc(100%/2 - #{$card-deck-margin});
+				max-width: calc(100%/2 - #{$card-deck-margin});
+			}
+		}
+		&--grid-3-cols {
+			.card {
+				flex: 1 0 calc(100%/3 - #{$card-deck-margin});
+				max-width: calc(100%/3 - #{$card-deck-margin});
+			}
+		}
+		&--grid-2-cols,
+		&--grid-3-cols {
+			.sticky {
+				.home & {
+					flex: none;
+					max-width: calc(100% - #{$card-deck-margin});
+				}
+			}
+		}
+	}
+	.two-sidebars {
+		.card {
+			flex: none;
+			max-width: 100%;
+		}
+	}
+}
+
+
+//
+// Masonry layout
+//
+
+@include media-breakpoint-up(md) {
+	.card-columns {
+		column-gap: $card-deck-margin;
+		.card {
+			display: inline-block;
+			width: 100%; // Don't let them exceed the column width
+		}
+	}
+	.posts-list--masonry-2-cols { column-count: 2; }
+	.posts-list--masonry-3-cols { column-count: 3; }
+	.two-sidebars {
+		column-gap: normal;
+		column-count: auto;
+		.card {
+			display: block;
+		}
+	}
+}

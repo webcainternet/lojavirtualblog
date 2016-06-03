@@ -1,0 +1,233 @@
+.post {
+	/* Gallery */
+	&-gallery {
+		margin: -10px -10px 10px;
+		@include media-breakpoint-up(lg) {
+			margin: -30px -30px 30px;
+		}
+		.single-post &{
+			margin: 0 0 50px;
+		}
+		.entry-content & {
+		}
+		img {
+			border-radius: $border__radius $border__radius 0 0;
+			display: block;
+			width: 100%;
+			.entry-content & {
+				border-radius: 0;
+			}
+		}
+		.swiper-button-prev {
+			width: 56px;
+			height: 56px;
+			left: 30px;
+			border-radius: $border__radius;
+		}
+		.swiper-button-next {
+			width: 56px;
+			height: 56px;
+			right: 30px;
+			border-radius: $border__radius;
+		}
+		.material-icons, .fa {
+			font-size: 28px;
+			line-height: 56px;
+		}
+		&__caption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 15px;
+			background: rgba(0,0,0,.5);
+			color: #fff;
+		}
+		&__link {
+			display: block;
+		}
+	}
+	&-featured-gallery{
+		position: relative;
+		.post__cats{
+			position: absolute;
+			z-index: 5;
+			left: 0;
+			top: 0;
+			margin: 30px 0;
+		}
+	}
+	/* Link */
+
+	&-format-link {
+
+	}
+	&-thumbnail{
+		&__format-link{
+			text-align: center;
+			display: block;
+			border-radius: $border__radius $border__radius 0 0;
+			padding: 25px 10px;
+			margin: -10px -10px 10px;
+			@include media-breakpoint-up(lg) {
+				margin: -30px -30px 30px;
+				padding: 46px 30px;
+			}
+			.single-post &{
+				margin: 30px 0 10px;
+				@include media-breakpoint-up(lg) {
+					margin: 30px 0;
+				}
+			}
+		}
+		.has-thumb & {
+			position: relative;
+		}
+		&__format-link {
+			.has-thumb & {
+				position: absolute;
+				top: 50%;
+				left: 10px;
+				right: 10px;
+				text-align: center;
+				@include transform(translateY(-50%));
+				border-radius: $border__radius;
+			}
+		}
+	}
+
+	/* Quote */
+	&-format-quote {
+		position: relative;
+		margin: 0;
+		line-height: 1.5;
+		border-left: 25px solid;
+		font-style: italic;
+		@include font-size(1);
+		padding-left: 15px;
+		@include media-breakpoint-up(lg){
+			@include font-size(1.25);
+			padding-left: 30px;
+		}
+		cite {
+			display: block;
+			font-style: normal;
+			@include font-size(1);
+			&:before {
+				content: "- ";
+			}
+		}
+	}
+
+	/* Wrapper for non-image featured content */
+	&-featured-content {
+		border-radius: $border__radius $border__radius 0 0;
+		margin: -10px -10px 10px;
+		overflow: hidden;
+		.posts-list--masonry-3-cols &,
+		.posts-list--masonry-2-cols &{
+			overflow: visible;
+		}
+		@include media-breakpoint-up(lg) {
+			margin: -30px -30px 30px;
+		}
+		.format-video & {
+			background: none;
+		}
+		.format-audio &{
+			margin: 20px 0 25px;
+			border-radius: 0;
+		}
+		.format-quote &{
+			padding: 70px 20px 70px 1px;
+		}
+		.post__cats {
+			margin: 10px 0 0 10px;
+			@include media-breakpoint-up(lg) {
+				margin: 30px 0 0 30px;
+			}
+			.format-video & {
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin: 10px;
+				@include media-breakpoint-up(lg) {
+					margin: 30px;
+				}
+				&:first-child {
+					position: static;
+				}
+			}
+		}
+	}
+
+	&.format-status {
+		.post__cats {
+			padding: 0 0 10px;
+		}
+	}
+}
+
+.embed-wrapper {
+	.twitter-tweet {
+		margin: 10px auto !important;
+		max-width: 90% !important;
+	}
+}
+
+.fb_iframe_widget {
+	max-width: 100%;
+	> span {
+		max-width: 100%;
+	}
+}
+
+/*Single Quote post format*/
+.single-post .format-quote{
+	blockquote {
+		margin: 50px 0;
+		&:first-child{
+			margin-top: 0;
+		}
+		position: relative;
+		line-height: 1.5;
+		font-style: italic;
+		color: #fff;
+		padding: 70px 20px 70px 1px;
+		border-radius: $border__radius $border__radius 0 0 ;
+		@include font-size(1);
+		@include media-breakpoint-up(lg){
+			@include font-size(1.25);
+		}
+		p{
+			border-left: 25px solid;
+			padding-left: 15px;
+			@include media-breakpoint-up(lg){
+				padding-left: 30px;
+			}
+		}
+		cite {
+			display: block;
+			font-style: normal;
+			@include font-size(1);
+			&:before {
+				content: "- ";
+			}
+		}
+	}
+}
+
+/*Single video post format*/
+.single-post .entry-content {
+	embed, iframe, object{
+		margin-bottom: 50px;
+		margin-top: 50px;
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+}
+
+.single-post .mejs-container{
+	margin-bottom: 50px;
+}

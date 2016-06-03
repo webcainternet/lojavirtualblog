@@ -1,0 +1,16 @@
+.site-logo {
+	padding: 0;
+	margin: 0;
+	line-height: 1.3125;
+	&__link {
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+
+.invert .site-logo__link,
+.invert .site-logo__link:hover,
+.invert .site-logo__link:active,
+.invert .site-logo__link:visited {
+	color: #f2f2f4;
+}

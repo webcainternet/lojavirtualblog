@@ -1,0 +1,21 @@
+.widget {
+	margin: 0 0 10px;
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 30px;
+	}
+	.sidebar-primary &,
+	.sidebar-secondary &,
+	/*.before-content-area &,
+	.after-content-area &,
+	.before-loop-area &,
+	.after-loop-area & */{
+		@include card;
+		padding: 15px;
+		@include media-breakpoint-up(lg) {
+			padding: 30px 28px;
+		}
+	}
+	select {
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,209 @@
+.follow-block {
+	padding: 0 0 20px;
+	.social-list{
+		margin: 22px 0 0;
+
+		@include media-breakpoint-up(lg) {
+			margin: 22px -14px 0;
+		}
+		.social-list__items li{
+			margin-right: 10px;
+			.sidebar-primary &,
+			.sidebar-secondary & {
+				@media (min-width: 768px) and (max-width: 991px) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+.subscribe-block {
+	.sidebar-primary &,
+	.sidebar-secondary & {
+		h4 {
+			margin-bottom: 25px;
+		}
+	}
+	padding: 0 0 20px;
+	.follow-block + & {
+		border-top: 1px solid #ccc;
+		padding: 20px 0 0;
+		.sidebar-primary &,
+		.sidebar-secondary & {
+			margin: 0 -15px 0;
+			padding-left: 15px;
+			padding-right: 15px;
+			@include media-breakpoint-up(lg) {
+				margin: 0 -28px 0;
+				padding-left: 28px;
+				padding-right: 28px;
+			}
+		}
+	}
+	&__form{
+		position: relative;
+	}
+	&__input-group {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-align-content: stretch;
+		align-content: stretch;
+		-webkit-align-items: flex-start;
+		align-items: flex-start;
+		position: relative;
+
+		@include media-breakpoint-up(sm) {
+			flex-wrap: nowrap;
+		}
+	}
+	&__input[type="email"] {
+		min-width: 50px;
+		padding: 18px 23px;
+		border: 2px solid transparent;
+		box-shadow: 0px 2px 3px 0px rgba(101, 97, 94, 0.13);
+		@include flex(1 1 auto);
+		@include order(0);
+		@include align-self(auto);
+		width: 100%;
+		@include media-breakpoint-up(sm){
+
+		}
+		.sidebar-primary &,
+		.sidebar-secondary & {
+			width: 100%;
+			padding-right: 60px;
+			@media (min-width: 768px) and (max-width: 991px) {
+				padding-left: 10px;
+				padding-right: 40px;
+			}
+		}
+		&.error{
+			border-color: #FC5047;
+			background: #ffeff2;
+		}
+	}
+	&__submit {
+		-webkit-order: 0;
+		order: 0;
+		-webkit-flex: 0 1 auto;
+		flex: 0 1 auto;
+		-webkit-align-self: auto;
+		align-self: auto;
+		padding: 20px 67px;
+		width: 100%;
+		margin-top: 20px;
+		text-align: center;
+		white-space: nowrap;
+		@include media-breakpoint-up(sm){
+			margin-top: 0;
+			width: auto;
+			margin-left: 15px;
+		}
+		.sidebar-primary &,
+		.sidebar-secondary & {
+			width: auto;
+			margin-top: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background: transparent;
+			margin-left: 0;
+			padding: 20px 20px;
+			@media (min-width: 768px) and (max-width: 991px) {
+				padding: 20px 10px;
+			}
+			&.btn-icon {
+				font-size: 21px;
+				line-height: 20px;
+				background: none;
+				&:hover{
+					background: none;
+				}
+				&:focus{
+					box-shadow: none;
+					outline: none;
+				}
+			}
+		}
+	}
+	&__message {
+		padding: 0 0 15px;
+	}
+	&__valid-messages{
+		.after-content-area & {
+			position: absolute;
+			top: 100%;
+		}
+	}
+	&__success{
+		color: green;
+	}
+	&__error{
+		color: red;
+	}
+}
+
+.widget-subscribe {
+	.sidebar-primary &,
+	.sidebar-secondary &{
+		background: #F5F5F5;
+	}
+	.before-content-area &,
+	.before-loop-area &,
+	.after-loop-area &{
+		background: transparent;
+	}
+	.after-content-area & {
+		background: transparent;
+		position: relative;
+		padding: 49px 0;
+		margin-bottom: 0;
+
+		.subscribe-block{
+			display: flex;
+			margin: 0 -15px;
+			flex-flow: row wrap;
+				&__description,
+				&__form{
+					padding: 0 15px;
+					flex: 1 1 100%;
+					@include media-breakpoint-up(lg){
+						flex: 1 1 50%;
+					}
+				}
+			&__form{
+				padding-top: 28px;
+				padding-bottom: 5px;
+				align-self: flex-start;
+			}
+		}
+		.site-content.container & {
+			@include card;
+			padding-right: 15px;
+			padding-left: 15px;
+			border-radius: 0;
+			&:before {
+				display: none;
+			}
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			width: 10000px;
+			left: 50%;
+			@include transform(translateX(-50%));
+			background: rgba(#000, 0.04);
+			z-index: -1;
+			top: 0;
+			bottom: 0;
+		}
+	}
+}

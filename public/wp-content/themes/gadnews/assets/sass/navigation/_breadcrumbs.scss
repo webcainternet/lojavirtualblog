@@ -1,0 +1,33 @@
+.breadcrumbs{
+	position: relative;
+	margin: 0 0 35px;
+		&__title{
+			float: left;
+				.page-title{
+					margin-top: 14px;
+					border-right: 1px solid #e0e0e8;
+					margin-right: 30px;
+					padding-right: 30px;
+				}
+		}
+		&__items{
+			float: left;
+		}
+		&__browse{
+			float: left;
+			margin-right: 10px;
+		}
+		&__wrap{
+			float: left;
+			margin: 12px 0;
+		}
+		&__item{
+			float: left;
+				&-sep{
+					margin: 0 20px;
+					.invert &{
+						color: #4B525F;
+					}
+				}
+		}
+}

@@ -1,0 +1,88 @@
+.widget ul li {
+	color: $regular_link_color;
+}
+/* invert color */
+.invert .widget ul li, .invert .widget ul li a {
+	color: $invert_link_color;
+}
+.invert .widget ul li a:hover {
+	color: $invert_link_hover_color;
+}
+.invert .widget select{
+	color: $invert_link_color;
+}
+/*--------------------------------------------------------------
+# Widget calendar
+--------------------------------------------------------------*/
+.widget_calendar .calendar_wrap caption{
+	color: $regular_h4_color;
+	font-family: $h1_font_family;
+}
+.widget_calendar .calendar_wrap th{
+	font-family: $h1_font_family;
+	color: $regular_h1_color;
+}
+.widget_calendar .calendar_wrap tr td a::before{
+	background-color: $regular_accent_color_3;
+}
+
+/* invert color */
+.invert .widget_calendar .calendar_wrap caption{
+	color: $invert_accent_color_1;
+}
+.invert .widget_calendar .calendar_wrap th{
+	color: $invert_accent_color_1;
+}
+.invert .widget_calendar .calendar_wrap a{
+	color: $invert_link_color;
+}
+.invert .widget_calendar .calendar_wrap a:hover{
+	color: $invert_link_hover_color;
+}
+.invert .widget_calendar .calendar_wrap tr td a::before{
+	background-color: $invert_accent_color_3;
+}
+/*--------------------------------------------------------------
+# Widget Tag Cloud
+--------------------------------------------------------------*/
+.widget_tag_cloud .tagcloud a{
+	color: $invert_text_color;
+	background: $regular_accent_color_1;
+	}
+.widget_tag_cloud .tagcloud a:hover{
+	color: $invert_link_color;
+	background: $regular_accent_color_2;
+
+}
+
+/* invert color */
+.invert .widget_tag_cloud .tagcloud a{
+	color: @contrast($invert_text_color, #fff, $invert_text_color);
+}
+.invert .widget_tag_cloud .tagcloud a:hover{
+	color: $invert_accent_color_1;
+	background: $regular_accent_color_2;
+}
+/*--------------------------------------------------------------
+# Widget Recent Posts
+--------------------------------------------------------------*/
+.widget_recent_entries ul li a, .widget_recent_comments ul li>a{
+	color: $regular_link_hover_color;
+}
+.widget_recent_entries ul li a:hover, .widget_recent_comments ul li>a:hover{
+	color: $regular_link_color;
+}
+.widget_recent_entries ul li .post-date::before{
+	color: $regular_accent_color_3;
+}
+
+/* invert color */
+.invert .widget_recent_entries ul li a, .invert .widget_recent_comments ul li>a{
+	color: $invert_link_hover_color;
+}
+.invert .widget_recent_entries ul li a:hover, .invert .widget_recent_comments ul li>a:hover{
+	color: $invert_link_color;
+}
+.invert .widget_recent_entries ul li .post-date::before{
+	color: $invert_accent_color_3;
+}

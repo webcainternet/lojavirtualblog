@@ -1,0 +1,117 @@
+.comments {
+	&-area {
+		position: relative;
+		padding: 37px 0 0;
+	}
+	&-title {
+		margin-bottom: 15px;
+		&:before {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			height: 1px;
+			background-color: $color__background-hr;
+		}
+	}
+}
+
+.comment {
+	&-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		.children {
+			list-style: none;
+			padding-left: 10px;
+			margin-left: 0;
+			@include media-breakpoint-up(lg) {
+				padding-left: 30px;
+			}
+		}
+		> .comment {
+			margin-bottom: 10px;
+			background-color: $color__background-input;
+		}
+	}
+	&-body {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		@include media-breakpoint-up(lg) {
+			padding-top: 30px;
+			padding-bottom: 15px;
+		}
+		&__holder {
+			@include media-breakpoint-up(lg){
+				padding-right: 40px;
+			}
+
+			.comment-content{
+				overflow: hidden;
+				clear: both;
+				@media (min-width: 400px) {
+					padding-left: 10px;
+					clear: none;
+				}
+				p{
+					padding: 18px 25px;
+					background: #fbfcfd;
+					border-radius: $border__radius;
+					position: relative;
+					@include media-breakpoint-up(lg){
+						&:before{
+							position: absolute;
+							content: '';
+							border-width: 9px 10px 9px 0;
+							border-color: transparent #fbfcfd transparent transparent;
+							right: 100%;
+							top: 50%;
+							width: 0;
+							height: 0;
+							border-style: solid;
+							@include transform(translateY(-50%));
+						}
+					}
+				}
+			}
+		}
+		.avatar {
+			float: left;
+			margin: 0 15px 10px 0;
+			width: 60px;
+			border-radius: $border__radius;
+			@include media-breakpoint-up(md) {
+				width: 100px;
+			}
+			@include media-breakpoint-up(lg) {
+				width: auto;
+				margin: 0 20px 15px 0;
+			}
+		}
+		.fn {
+			margin-right: 10px;
+			margin-left: 10px;
+			@include font-size(1);
+			@include media-breakpoint-up(lg) {
+				margin-right: 25px;
+			}
+		}
+		.reply {
+			transition: all 0.25s ease;
+			&:hover {
+
+			}
+		}
+	}
+	&-reply-link {
+	}
+	&-date {
+		display: inline-block;
+		&__time {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+}

@@ -1,0 +1,54 @@
+.comment {
+	&-respond {
+		padding: 37px 0 15px;
+		border-top: 1px solid $color__background-hr;
+	}
+	&-reply-title {
+
+	}
+	&-form {
+		&-comment,
+		&-author,
+		&-email,
+		&-url {
+			margin: 0 0 15px;
+			@include media-breakpoint-up(lg){
+				margin: 0 0 30px;
+			}
+		}
+		&-author,
+		&-email,
+		&-url {
+			@include media-breakpoint-up(lg){
+				width: 30%;
+				float: left;
+			}
+		}
+		&-email {
+			@include media-breakpoint-up(lg){
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+		}
+		&__field {
+			width: 100%;
+			vertical-align: top;
+			.comment-list & {
+				background-color: #fff;
+			}
+		}
+		.form-submit {
+			clear: both;
+			margin-top: 0;
+
+		}
+		.logged-in-as,
+		.comment-notes {
+			margin: 15px 0 40px;
+			@include font-size(1.125);
+		}
+	}
+}
+#cancel-comment-reply-link {
+	@include font-size(0.75);
+}

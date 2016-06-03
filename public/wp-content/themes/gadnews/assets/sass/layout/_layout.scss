@@ -1,0 +1,18 @@
+.container {
+	&.site-header,
+	&.site-content,
+	&.site-footer {
+		> .container {
+			@include reset-container();
+		}
+	}
+}
+
+// Theme specific
+.site-header,
+.site-footer {
+	&.container {
+		max-width: 100%;
+		padding: 0;
+	}
+}

@@ -1,0 +1,28 @@
+.site-header.default {
+	.main-navigation {
+		text-align: left;
+		clear: both;
+		@media (min-width: 600px) {
+			ul.menu > li {
+				padding: 7px 0 19px;
+			}
+		}
+	}
+	.site-branding {
+		float: left;
+		padding: 25.5px 0;
+		@media (min-width: 600px) {
+			padding: 25.5px 0 0;
+		}
+	}
+	.social-list {
+		float: right;
+		margin: 0 -10px;
+		@media (min-width: 600px) {
+			padding: 25.5px 0 0;
+		}
+		@media (max-width: 599px) {
+			display: none;
+		}
+	}
+}

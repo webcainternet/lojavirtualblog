@@ -1,0 +1,62 @@
+.site {
+	@include hyphens(auto);
+	overflow: hidden;
+	&-content{
+		#primary, #sidebar-primary, #sidebar-secondary {
+			margin: 15px 0;
+		}
+		.single-post &{
+			#primary{
+				margin: 45px 0;
+			}
+			#sidebar-primary, #sidebar-secondary{
+				margin: 50px 0;
+			}
+		}
+		.page &{
+			#primary{
+				margin: 20px 0;
+			}
+			#sidebar-primary, #sidebar-secondary{
+				margin: 50px 0;
+			}
+		}
+		.search &{
+			#sidebar-primary, #sidebar-secondary{
+				margin: 30px 0;
+			}
+		}
+	}
+}
+
+@import "../layout/layout";
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+@import "primary/header";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Post Formats
+--------------------------------------------------------------*/
+@import "primary/post-formats";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+@import "primary/footer";
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+@import "primary/asides";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";

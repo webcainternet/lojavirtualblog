@@ -1,0 +1,6 @@
+.widget_fbw_id .loader {
+	border-top: 1.1em solid @alpha($regular_accent_color_1, 20);
+	border-right: 1.1em solid @alpha($regular_accent_color_1, 20);
+	border-bottom: 1.1em solid @alpha($regular_accent_color_1, 20);
+	border-left: 1.1em solid $regular_accent_color_1;
+}
