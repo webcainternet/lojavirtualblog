@@ -35,7 +35,8 @@
 					gadnews_top_message( '<div class="top-panel__message">%s</div>' );
 					gadnews_top_search( '<div class="top-panel__search">%s</div>' );
 					gadnews_top_menu();
-					?></div>
+					?>
+					</div>
 			</div><!-- .top-panel -->
 		<?php } ?>
 
